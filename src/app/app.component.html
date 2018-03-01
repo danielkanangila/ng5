@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--waterfall mdl-color--primary">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">
+        <h5>NgCode</h5>
+      </span>
+      <div class="mdl-layout-spacer"></div>
+      <app-search></app-search>
+      <app-menu></app-menu>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+      <span class="app mdl-layout-title">
+        Ng5 Code
+      </span>
+      <nav class="mdl-navigation">
+        <a routerLink="" class="mdl-navigation__link">Home</a>
+        <a routerLink="about/40" class="mdl-navigation__link">About</a>
+      </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

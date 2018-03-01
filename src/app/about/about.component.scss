@@ -1,0 +1,25 @@
+.app-about {
+    padding: 0px;
+}
+
+.app-border {
+  display: block;
+  content: "";
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+h1.title {
+    margin: 0;
+    font-size: 1.5em;
+    margin: 16px;
+}
+
+.app-about-content {
+    padding: 16px;
+    font-weight: normal;
+}
+
+.mdl-card__supporting-text.meta {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+

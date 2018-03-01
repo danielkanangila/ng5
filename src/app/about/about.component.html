@@ -1,0 +1,21 @@
+<div class="mdl-grid">
+  <div class="app-about mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-card">
+    <h1 class="title mdl-color-text--grey-600">About</h1>
+    <div class="app-border"></div>
+    <div class="app-about-content mdl-color-text--grey-600">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis maxime, vel harum magni excepturi quidem ex animi est asperiores doloremque itaque debitis id ad rerum! Cumque nisi voluptatem ducimus placeat!
+      </p>
+    </div>
+  </div>
+  <div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-card">
+    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+      <span>Your bucket list</span>
+    </div>
+    <div class="app-border"></div>
+    <div class="mdl-card__supporting-text meta mdl-color-text-grey-600" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
+      {{ goal }}
+    </div>
+  </div>
+</div>
+

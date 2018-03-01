@@ -1,0 +1,30 @@
+<div class="app-home mdl-grid">
+  <div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-card">
+    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+      <span>App bucket list item</span>
+    </div> 
+    <div class="app-border"></div>
+    <div class="mdl-card__supporting-text meta mdl-color-text-grey-600">
+      <p class="sm">Use this form below to add a bucket list goal. What do you want to do with your life?</p>
+      <form>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input [(ngModel)]="goalText" class="mdl-textfield__input" type="text" id="lifeGoal" name="lifeGoal">
+          <label class="mdl-textfield__label" for="lifeGoal">Life goal...</label>
+        </div>
+        <div></div>
+        <button (click)="addItem()" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">
+          Add Item
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-card" [@goals]="goals.length">
+    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+      <span>Your bucket list ({{ itemCount }})</span>
+    </div>
+    <div class="app-border"></div>
+    <div class="mdl-card__supporting-text meta mdl-color-text-grey-600" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
+      {{ goal }}
+    </div>
+  </div>
+</div>
